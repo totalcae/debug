@@ -22,6 +22,7 @@
 			"allowedValues": [
 				"Standard_H16r",
 				"Standard_H16mr",
+				 "Standard_A0",
                                 "Standard_A8",
                                 "Standard_A9",
 				"Standard_A10",
@@ -106,7 +107,7 @@
 		"osDiskName": "[concat(variables('namingInfix'), 'osdisk')]",
 		"addressPrefix": "172.16.0.0/16",
 		"subnetPrefix": "172.16.1.0/24",
-		"virtualNetworkName": "[concat(variables('namingInfix'), 'vnet')]",
+		"virtualNetworkName": "testoffice",
 		"subnetName": "[concat(variables('namingInfix'), 'subnet')]",
 		"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
 		"subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
