@@ -107,7 +107,7 @@
 		"osDiskName": "[concat(variables('namingInfix'), 'osdisk')]",
 		"addressPrefix": "172.16.0.0/16",
 		"subnetPrefix": "172.16.1.0/24",
-		"virtualNetworkName": "testoffice",
+		"virtualNetworkName": "testoffice2",
 		"subnetName": "[concat(variables('namingInfix'), 'subnet')]",
 		"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
 		"subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
