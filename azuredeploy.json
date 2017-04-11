@@ -186,8 +186,7 @@
 			}]
 		},
 		"dependsOn": [
-			"[concat('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))]",
-			"[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+			"[concat('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))]"
 		]
 	}, {
 		"type": "Microsoft.Compute/virtualMachines",
@@ -309,8 +308,7 @@
 			}
 		},
 		"dependsOn": [
-			"storageLoop",
-			"[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+			"storageLoop"
 		]
 	}]
 }
