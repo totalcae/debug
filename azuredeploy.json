@@ -108,7 +108,7 @@
 		"addressPrefix": "192.168.222.0/29",
 		"subnetPrefix": "192.168.222.128/25",
 		"virtualNetworkName": "testaaxvn",
-		"subnetName": "[concat(variables('namingInfix'), 'subnet')]",
+		"subnetName": "subnet_128_25",
 		"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
 		"subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
 		"publicIPAddressName": "[concat(variables('namingInfix'), 'pip')]",
