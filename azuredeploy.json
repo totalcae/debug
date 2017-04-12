@@ -67,7 +67,7 @@
 				"description": "TotalCAE License Key"
 			}
 		},
-		"CIDR Block": {
+		"cidrblock": {
 			"maxLength": 30,
 			"defaultValue": "192.168.222.128/25",
 			"type": "String",
