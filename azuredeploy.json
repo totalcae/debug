@@ -270,7 +270,7 @@
 		},
 		"name": "[variables('namingInfix')]",
 		"apiVersion": "[variables('computeApiVersion')]",
-		"location": "[parameters('resourceLocation')]",202
+		"location": "[parameters('resourceLocation')]",
 
                 "apiVersion": "[variables('computeApiVersion')]",
 		"properties": {
