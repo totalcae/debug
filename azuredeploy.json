@@ -248,7 +248,7 @@
 				"autoUpgradeMinorVersion": true,
 				"settings": {
 					"fileUris": "[variables('vmScripts').scriptsToDownload]",
-					"commandToExecute": "[concat('bash ', 'setup.sh ',parameters('adminUsername'),' ',parameters('adminPassword'),' ',parameters('TotalCAEKey'),' ',parameters('downloadApplication'), ' ', variables('namingInfix'),' ',parameters('instanceCount')) ]",
+					"commandToExecute": "[concat('bash ', 'setup.sh ',parameters('adminUsername'),' ',parameters('adminPassword'),' ',parameters('TotalCAEKey'),' ',parameters('downloadApplication'), ' ', variables('namingInfix'),' ',parameters('instanceCount'), parameters('cidrblock')) ]",
 					"timestamp": 4
 				}
 			},
@@ -270,7 +270,9 @@
 		},
 		"name": "[variables('namingInfix')]",
 		"apiVersion": "[variables('computeApiVersion')]",
-		"location": "[parameters('resourceLocation')]",
+		"location": "[parameters('resourceLocation')]",202
+
+                "apiVersion": "[variables('computeApiVersion')]",
 		"properties": {
 			"overprovision": "true",
 			"upgradePolicy": {
