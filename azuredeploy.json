@@ -200,7 +200,6 @@
 	}, {
 		"type": "Microsoft.Compute/virtualMachines",
 		"name": "[variables('jumpBoxName')]",
-		"apiVersion": "[variables('computeApiVersion')]",
 		"location": "[parameters('resourceLocation')]",
 		"properties": {
 			"hardwareProfile": {
@@ -221,13 +220,12 @@
 					"caching": "ReadWrite",
 					"createOption": "FromImage"
 				},
-				"dataDisks":  {
+				"dataDisks":  [{
 				  "name": "[variables('jumpBoxApplicationsDiskName')]",
                                   "diskSizeGB": "800",
                                   "lun": 0,
                                   "createOption": "Empty"
-                                }
-			
+                                }]
 			},
 			"networkProfile": {
 				"networkInterfaces": [{
