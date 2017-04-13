@@ -219,7 +219,13 @@
 					},
 					"caching": "ReadWrite",
 					"createOption": "FromImage"
-				}
+				},
+				"dataDisks":  {
+                                  "diskSizeGB": "800",
+                                  "lun": 0,
+                                  "createOption": "Empty"
+                                }
+			
 			},
 			"networkProfile": {
 				"networkInterfaces": [{
