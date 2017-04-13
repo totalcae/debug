@@ -220,13 +220,7 @@
 					},
 					"caching": "ReadWrite",
 					"createOption": "FromImage"
-				},
-				"dataDisks":  [{
-				  "name": "[variables('jumpBoxApplicationsDiskName')]",
-                                  "diskSizeGB": "800",
-                                  "lun": 0,
-                                  "createOption": "Empty"
-                                }]
+				}
 			},
 			"networkProfile": {
 				"networkInterfaces": [{
