@@ -200,6 +200,7 @@
 	}, {
 		"type": "Microsoft.Compute/virtualMachines",
 		"name": "[variables('jumpBoxName')]",
+		"apiVersion": "[variables('computeApiVersion')]",
 		"location": "[parameters('resourceLocation')]",
 		"properties": {
 			"hardwareProfile": {
