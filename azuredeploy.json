@@ -124,7 +124,7 @@
 		"publicIPAddressID": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]",
 		"nicName": "[concat(variables('namingInfix'), 'nic')]",
 		"ipConfigName": "[concat(variables('namingInfix'), 'ipconfig')]",
-		"scriptUrl": "https://raw.githubusercontent.com/totalcae/public-cloud/master/",
+		"scriptUrl": "https://raw.githubusercontent.com/totalcae/debug/master/",
 		"cnSetupScript": "make-node.sh",
 		"hnSetupScript": "make-head.sh",
 		"osType": {
