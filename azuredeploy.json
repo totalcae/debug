@@ -116,7 +116,7 @@
 		"osDiskName": "[concat(variables('namingInfix'), 'osdisk')]",
 		"addressPrefix": "192.168.222.0/29",
 		"subnetPrefix": "192.168.222.128/25",
-		"virtualNetworkName": "testaaxvn",
+		"virtualNetworkName": "TotalCAE_VNET",
 		"subnetName": "subnet_128_25",
 		"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
 		"subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
