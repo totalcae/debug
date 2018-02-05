@@ -116,7 +116,7 @@
 		"osDiskName": "[concat(variables('namingInfix'), 'osdisk')]",
 		"addressPrefix": "10.170.3.0/29",
 		"subnetPrefix": "10.170.3.128/25",
-		"virtualNetworkName": "testbwvn",
+		"virtualNetworkName": "borgwvn",
 		"subnetName": "subnet_128_25",
 		"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
 		"subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
