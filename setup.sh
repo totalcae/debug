@@ -24,7 +24,6 @@ export LICENSE_KEY=$3
 export APPLICATION=$4
 export NODEPREFIX=$5
 export INSTANCE_COUNT=$6
-export CIDRBLOCK=$7
 
 printenv > /tmp/ENVIRONMENT
 
@@ -33,9 +32,10 @@ localip=`hostname -i | cut --delimiter='.' -f -3`
 
 mkdir -p /srv/ 
 cd /srv
-/bin/wget https://totalcaeapplications.blob.core.windows.net/applications/chef-repo.tar.gpg
-echo ${LICENSE_KEY} |  gpg --batch --output chef-repo.tar --passphrase-fd O  --decrypt chef-repo.tar.gpg
-tar xfv chef-repo.tar
-cd chef-repo
-./make-head.sh 
+/bin/wget https://totalcaeapplications.blob.core.windows.net/applications/repo.tar.gpg
+echo ${LICENSE_KEY} |  gpg --batch --output repo.tar --passphrase-fd O  --decrypt repo.tar.gpg
+tar xfv repo.tar
+cd totalcaeansible
+/bin/cp azure/* .
+./make-head.sh > /var/log/totalcaedeploy.log 2>&1
 
